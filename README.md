@@ -2,6 +2,24 @@
 
 Pajamas is a JAMStack Starter template built with Next.js, Tailwind CSS & Sanity CMS.
 
+## Setup Sanity in the Next.js Frontend
+
+First Install `next-sanity` plugin:
+
+```
+yarn add next-sanity
+```
+
+## Add .env Variables
+
+Open `.env.local` and add the sanity project id. If you want to set different dataset than production, you can add that as well (optional)
+
+**Heads up!** Make sure you copy those `.env` variables to Vercel when you publish the project.
+
+## Setup Sanity Site Config
+
+Every site has some global settings, We can manage them through sanity. But as of now (May 2022) Sanity does not directly support singleton documents. So we do it using a simple hack. To do that, first we need to create a new site Settings Page in Sanity and then disable the `create` and `delete` \_\_experimental_actions in `/schemas/siteConfig.js` so only one site-settings is created. (instead of an array)
+
 <!-- This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v2.2)](https://blog.tailwindcss.com/tailwindcss-2-2) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
 
 It uses the new [`Just-in-Time Mode`](https://tailwindcss.com/docs/just-in-time-mode) for Tailwind CSS.
