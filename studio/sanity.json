@@ -12,7 +12,9 @@
     "@sanity/base",
     "@sanity/default-layout",
     "@sanity/default-login",
-    "@sanity/desk-tool"
+    "@sanity/desk-tool",
+    "@sanity/code-input",
+    "asset-source-unsplash"
   ],
   "env": {
     "development": {
@@ -21,8 +23,14 @@
       ]
     }
   },
-  "parts": [{
-    "name": "part:@sanity/base/schema",
-    "path": "./schemas/schema"
-  }]
+  "parts": [
+    {
+      "name": "part:@sanity/base/schema",
+      "path": "./schemas/schema"
+    },
+    {
+      "implements": "part:@sanity/desk-tool/structure",
+      "path": "./src/deskStructure"
+    }
+  ]
 }
