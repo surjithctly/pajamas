@@ -5,7 +5,7 @@
     "basePath": "/studio"
   },
   "api": {
-    "projectId": "0iqrdzcm",
+    "projectId": "",
     "dataset": "production"
   },
   "plugins": [
@@ -23,8 +23,7 @@
       ]
     }
   },
-  "parts": [
-    {
+  "parts": [{
       "name": "part:@sanity/base/schema",
       "path": "./schemas/schema"
     },
